@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7F2F7"
+    tools:context=".MainActivity"
+    android:id="@+id/rootLayout">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rive_char_card"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="200dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="@drawable/rive_back"
+        >
+
+        <app.rive.runtime.kotlin.RiveAnimationView
+            android:id="@+id/rive_char"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:riveResource="@raw/login_charecter"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="52dp"
+        android:hint="Enter your Email"
+        android:textColor="#032E40"
+        android:textColorHint="#154E66"
+        app:boxStrokeColor="#146F95"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="#04415B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rive_char_card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/emailogo"
+            android:inputType="none"
+            android:drawablePadding="10dp"
+            android:autofillHints="false"
+            android:drawableTint="#146F96"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passoutline"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your password"
+        android:textColor="#032E40"
+        android:textColorHint="#154E66"
+        app:boxStrokeColor="#146F95"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="#04415B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/passlogo"
+            android:drawablePadding="10dp"
+            android:drawableTint="#146F96"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textSize="18dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbtn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:background="@drawable/loginbt"
+        android:fontFamily="@font/candal"
+        android:text="LogIn"
+        android:textColor="#032E40"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/passoutline"
+        app:layout_constraintTop_toBottomOf="@+id/passoutline"
+        app:layout_constraintVertical_bias="0.259" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
